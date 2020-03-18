@@ -1,0 +1,146 @@
+[
+  {
+    "id": "1",
+    "latitude": "-29.1540307",
+    "longitude": "-51.1440026",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "2",
+    "latitude": "-29.1553471",
+    "longitude": "-51.1438309",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "3",
+    "latitude": "-29.1553986",
+    "longitude": "-51.145231",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "4",
+    "latitude": "-29.1549114",
+    "longitude": "-51.1467384",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "5",
+    "latitude": "-29.1553284",
+    "longitude": "-51.1479991",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "6",
+    "latitude": "-29.1573996",
+    "longitude": "-51.1470871",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "7",
+    "latitude": "-29.157676",
+    "longitude": "-51.1430584",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "8",
+    "latitude": "-29.1589127",
+    "longitude": "-51.1414759",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "9",
+    "latitude": "-29.1589268",
+    "longitude": "-51.1398612",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "10",
+    "latitude": "-29.151136",
+    "longitude": "-51.1337955",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "11",
+    "latitude": "-29.1481048",
+    "longitude": "-51.1305071",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "12",
+    "latitude": "-29.1486155",
+    "longitude": "-51.1311884",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "13",
+    "latitude": "-29.149031",
+    "longitude": "-51.1321003",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "14",
+    "latitude": "-29.1497384",
+    "longitude": "-51.1359492",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "15",
+    "latitude": "-29.1483369",
+    "longitude": "-51.1360106",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "16",
+    "latitude": "-29.1465596",
+    "longitude": "-51.1360495",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "17",
+    "latitude": "-29.1387839",
+    "longitude": "-51.1328303",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  },
+  {
+    "id": "18",
+    "latitude": "-29.1164958",
+    "longitude": "-51.1119397",
+    "hora": "16:18",
+    "linha": "L011",
+    "prestadora": "Caxiense"
+  }
+]

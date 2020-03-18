@@ -1,0 +1,106 @@
+[
+  {
+    "id": "1",
+    "latitude": "-29.1836486",
+    "longitude": "-51.1881712",
+    "hora": "16:05",
+    "linha": "L038",
+    "prestadora": "Bragé"
+  },
+  {
+    "id": "2",
+    "latitude": "-29.182948",
+    "longitude": "-51.1908006",
+    "hora": "16:05",
+    "linha": "L038",
+    "prestadora": "Bragé"
+  },
+  {
+    "id": "3",
+    "latitude": "-29.1826132",
+    "longitude": "-51.1935215",
+    "hora": "16:05",
+    "linha": "L038",
+    "prestadora": "Bragé"
+  },
+  {
+    "id": "4",
+    "latitude": "-29.1823232",
+    "longitude": "-51.1951793",
+    "hora": "16:05",
+    "linha": "L038",
+    "prestadora": "Bragé"
+  },
+  {
+    "id": "5",
+    "latitude": "-29.1816119",
+    "longitude": "-51.1996124",
+    "hora": "16:05",
+    "linha": "L038",
+    "prestadora": "Bragé"
+  },
+  {
+    "id": "6",
+    "latitude": "-29.1788374",
+    "longitude": "-51.1971823",
+    "hora": "16:05",
+    "linha": "L038",
+    "prestadora": "Bragé"
+  },
+  {
+    "id": "7",
+    "latitude": "-29.1781835",
+    "longitude": "-51.1925549",
+    "hora": "16:05",
+    "linha": "L038",
+    "prestadora": "Bragé"
+  },
+  {
+    "id": "8",
+    "latitude": "-29.1753966",
+    "longitude": "-51.1928499",
+    "hora": "16:05",
+    "linha": "L038",
+    "prestadora": "Bragé"
+  },
+  {
+    "id": "9",
+    "latitude": "-29.1704007",
+    "longitude": "-51.1883761",
+    "hora": "16:05",
+    "linha": "L038",
+    "prestadora": "Bragé"
+  },
+  {
+    "id": "10",
+    "latitude": "-29.1691336",
+    "longitude": "-51.1883544",
+    "hora": "16:05",
+    "linha": "L038",
+    "prestadora": "Bragé"
+  },
+  {
+    "id": "11",
+    "latitude": "-29.1334998",
+    "longitude": "-51.1242707",
+    "hora": "16:05",
+    "linha": "L038",
+    "prestadora": "Bragé"
+  },
+  {
+    "id": "12",
+    "latitude": "-29.1342187",
+    "longitude": "-51.1188074",
+    "hora": "16:05",
+    "linha": "L038",
+    "prestadora": "Bragé"
+  },
+  {
+    "id": "13",
+    "latitude": "-29.116458",
+    "longitude": "-51.1121392",
+    "hora": "16:05",
+    "linha": "L038",
+    "prestadora": "Bragé"
+  }
+]

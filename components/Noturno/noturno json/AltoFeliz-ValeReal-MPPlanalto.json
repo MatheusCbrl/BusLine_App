@@ -1,0 +1,106 @@
+[
+  {
+    "id": "1",
+    "latitude": "-29.35534",
+    "longitude": "-51.30614",
+    "hora": "15:15",
+    "linha": "L040",
+    "prestadora": "Nova Palmira"
+  },
+  {
+    "id": "2",
+    "latitude": "-29.37737",
+    "longitude": "-51.32861",
+    "hora": "15:15",
+    "linha": "L040",
+    "prestadora": "Nova Palmira"
+  },
+  {
+    "id": "3",
+    "latitude": "-29.38595",
+    "longitude": "-51.30183",
+    "hora": "15:15",
+    "linha": "L040",
+    "prestadora": "Nova Palmira"
+  },
+  {
+    "id": "4",
+    "latitude": "-29.4024",
+    "longitude": "-51.28902",
+    "hora": "15:15",
+    "linha": "L040",
+    "prestadora": "Nova Palmira"
+  },
+  {
+    "id": "5",
+    "latitude": "-29.38072",
+    "longitude": "-51.31281",
+    "hora": "15:15",
+    "linha": "L040",
+    "prestadora": "Nova Palmira"
+  },
+  {
+    "id": "6",
+    "latitude": "-29.40482",
+    "longitude": "-51.30796",
+    "hora": "15:15",
+    "linha": "L040",
+    "prestadora": "Nova Palmira"
+  },
+  {
+    "id": "7",
+    "latitude": "-29.41787",
+    "longitude": "-51.29394",
+    "hora": "15:15",
+    "linha": "L040",
+    "prestadora": "Nova Palmira"
+  },
+  {
+    "id": "8",
+    "latitude": "-29.41734",
+    "longitude": "-51.28302",
+    "hora": "15:15",
+    "linha": "L040",
+    "prestadora": "Nova Palmira"
+  },
+  {
+    "id": "9",
+    "latitude": "-29.39826",
+    "longitude": "-51.25342",
+    "hora": "15:15",
+    "linha": "L040",
+    "prestadora": "Nova Palmira"
+  },
+  {
+    "id": "10",
+    "latitude": "-29.39488",
+    "longitude": "-51.24438",
+    "hora": "15:15",
+    "linha": "L040",
+    "prestadora": "Nova Palmira"
+  },
+  {
+    "id": "11",
+    "latitude": "-29.39436",
+    "longitude": "-51.24024",
+    "hora": "15:15",
+    "linha": "L040",
+    "prestadora": "Nova Palmira"
+  },
+  {
+    "id": "12",
+    "latitude": "-29.18446",
+    "longitude": "-51.16846",
+    "hora": "15:15",
+    "linha": "L040",
+    "prestadora": "Nova Palmira"
+  },
+  {
+    "id": "13",
+    "latitude": "-29.11655",
+    "longitude": "-51.11198",
+    "hora": "15:15",
+    "linha": "L040",
+    "prestadora": "Nova Palmira"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "latitude": "-29.0932342",
+    "longitude": "-51.0313761",
+    "hora": "16:00",
+    "linha": "L043",
+    "prestadora": "Unidos"
+  },
+  {
+    "id": "2",
+    "latitude": "-29.1134069",
+    "longitude": "-51.0172765",
+    "hora": "16:00",
+    "linha": "L043",
+    "prestadora": "Unidos"
+  },
+  {
+    "id": "3",
+    "latitude": "-29.1222822",
+    "longitude": "-51.0029625",
+    "hora": "16:00",
+    "linha": "L043",
+    "prestadora": "Unidos"
+  },
+  {
+    "id": "4",
+    "latitude": "-29.1251584",
+    "longitude": "-51.0031152",
+    "hora": "16:00",
+    "linha": "L043",
+    "prestadora": "Unidos"
+  },
+  {
+    "id": "5",
+    "latitude": "-29.1386559",
+    "longitude": "-51.0034541",
+    "hora": "16:00",
+    "linha": "L043",
+    "prestadora": "Unidos"
+  },
+  {
+    "id": "6",
+    "latitude": "-29.1280698",
+    "longitude": "-51.0093156",
+    "hora": "16:00",
+    "linha": "L043",
+    "prestadora": "Unidos"
+  },
+  {
+    "id": "7",
+    "latitude": "-29.1256208",
+    "longitude": "-51.0118381",
+    "hora": "16:00",
+    "linha": "L043",
+    "prestadora": "Unidos"
+  },
+  {
+    "id": "8",
+    "latitude": "-29.1256048",
+    "longitude": "-51.0165713",
+    "hora": "16:00",
+    "linha": "L043",
+    "prestadora": "Unidos"
+  },
+  {
+    "id": "9",
+    "latitude": "-29.1160252",
+    "longitude": "-51.0810969",
+    "hora": "16:00",
+    "linha": "L043",
+    "prestadora": "Unidos"
+  },
+  {
+    "id": "10",
+    "latitude": "-29.1164498",
+    "longitude": "-51.1120863",
+    "hora": "16:00",
+    "linha": "L043",
+    "prestadora": "Unidos"
+  }
+]
