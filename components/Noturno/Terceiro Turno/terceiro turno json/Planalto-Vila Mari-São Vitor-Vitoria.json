@@ -1,0 +1,90 @@
+[
+    {
+        "id": "1",
+        "latitude": "-29.1836824",
+        "longitude": "-51.1672938",
+        "hora": "21:15",
+        "linha": "L012",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "2",
+        "latitude": "-29.185642",
+        "longitude": "-51.1695508",
+        "hora": "21:15",
+        "linha": "L012",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "3",
+        "latitude": "-29.1881359",
+        "longitude": "-51.1692075",
+        "hora": "21:15",
+        "linha": "L012",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "4",
+        "latitude": "-29.1904641",
+        "longitude": "-51.1653688",
+        "hora": "21:15",
+        "linha": "L012",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "5",
+        "latitude": "-29.1888877",
+        "longitude": "-51.1643485",
+        "hora": "21:15",
+        "linha": "L012",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "6",
+        "latitude": "-29.1934147",
+        "longitude": "-51.1672849",
+        "hora": "21:15",
+        "linha": "L012",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "7",
+        "latitude": "-29.1962244",
+        "longitude": "-51.1666492",
+        "hora": "21:15",
+        "linha": "L012",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "8",
+        "latitude": "-29.1979596",
+        "longitude": "-51.1648848",
+        "hora": "21:15",
+        "linha": "L012",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "9",
+        "latitude": "-29.1838028",
+        "longitude": "-51.1576243",
+        "hora": "21:15",
+        "linha": "L012",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "10",
+        "latitude": "-29.1773635",
+        "longitude": "-51.1572243",
+        "hora": "21:15",
+        "linha": "L012",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "11",
+        "latitude": "-29.1166189",
+        "longitude": "-51.111778",
+        "hora": "21:15",
+        "linha": "L012",
+        "prestadora": "Unidos"
+    }
+]

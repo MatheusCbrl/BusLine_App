@@ -1,0 +1,114 @@
+[
+    {
+        "id": "1",
+        "latitude": "-29.1876291",
+        "longitude": "-51.2049941",
+        "hora": "21:10",
+        "linha": "L011",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "2",
+        "latitude": "-29.1882582",
+        "longitude": "-51.2069226",
+        "hora": "21:10",
+        "linha": "L011",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "3",
+        "latitude": "-29.1941786",
+        "longitude": "-51.2023453",
+        "hora": "21:10",
+        "linha": "L011",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "4",
+        "latitude": "-29.1947265",
+        "longitude": "-51.2056445",
+        "hora": "21:10",
+        "linha": "L011",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "5",
+        "latitude": "-29.1948763",
+        "longitude": "-51.2087719",
+        "hora": "21:10",
+        "linha": "L011",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "6",
+        "latitude": "-29.2049013",
+        "longitude": "-51.2094809",
+        "hora": "21:10",
+        "linha": "L011",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "7",
+        "latitude": "-29.2183705",
+        "longitude": "-51.1989745",
+        "hora": "21:10",
+        "linha": "L011",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "8",
+        "latitude": "-29.2123884",
+        "longitude": "-51.19536",
+        "hora": "21:10",
+        "linha": "L011",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "9",
+        "latitude": "-29.2085685",
+        "longitude": "-51.1920192",
+        "hora": "21:10",
+        "linha": "L011",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "10",
+        "latitude": "-29.2045423",
+        "longitude": "-51.1960787",
+        "hora": "21:10",
+        "linha": "L011",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "11",
+        "latitude": "-29.1994696",
+        "longitude": "-51.1970219",
+        "hora": "21:10",
+        "linha": "L011",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "12",
+        "latitude": "-29.1612443",
+        "longitude": "-51.1567032",
+        "hora": "21:10",
+        "linha": "L011",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "13",
+        "latitude": "-29.1268142",
+        "longitude": "-51.1276559",
+        "hora": "21:10",
+        "linha": "L011",
+        "prestadora": "Unidos"
+    },
+    {
+        "id": "14",
+        "latitude": "-29.1166188",
+        "longitude": "-51.1117579",
+        "hora": "21:10",
+        "linha": "L011",
+        "prestadora": "Unidos"
+    }
+]

@@ -1,0 +1,90 @@
+[
+    {
+        "id": "1",
+        "latitude": "-29.1994317",
+        "longitude": "-51.250948",
+        "hora": "21:15",
+        "linha": "L001",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "2",
+        "latitude": "-29.1940454",
+        "longitude": "-51.2403326",
+        "hora": "21:15",
+        "linha": "L001",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "3",
+        "latitude": "-29.2024304",
+        "longitude": "-51.2465618",
+        "hora": "21:15",
+        "linha": "L001",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "4",
+        "latitude": "-29.2027842",
+        "longitude": "-51.2371067",
+        "hora": "21:15",
+        "linha": "L001",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "5",
+        "latitude": "-29.2053303",
+        "longitude": "-51.2372086",
+        "hora": "21:15",
+        "linha": "L001",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "6",
+        "latitude": "-29.2081734",
+        "longitude": "-51.2368624",
+        "hora": "21:15",
+        "linha": "L001",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "7",
+        "latitude": "-29.1975037",
+        "longitude": "-51.2382123",
+        "hora": "21:15",
+        "linha": "L001",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "8",
+        "latitude": "-29.1897204",
+        "longitude": "-51.239154",
+        "hora": "21:15",
+        "linha": "L001",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "9",
+        "latitude": "-29.1892138",
+        "longitude": "-51.2387486",
+        "hora": "21:15",
+        "linha": "L001",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "10",
+        "latitude": "-29.1833071",
+        "longitude": "-51.2329717",
+        "hora": "21:15",
+        "linha": "L001",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "11",
+        "latitude": "-29.1165479",
+        "longitude": "-51.111904",
+        "hora": "21:15",
+        "linha": "L001",
+        "prestadora": "Bragé"
+    }
+]
