@@ -1,0 +1,98 @@
+[
+    {
+        "id": "1",
+        "latitude": "-29.2026485",
+        "longitude": "-51.1891943",
+        "hora": "06:18",
+        "linha": "L108",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "2",
+        "latitude": "-29.2017836",
+        "longitude": "-51.1931684",
+        "hora": "06:18",
+        "linha": "L108",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "3",
+        "latitude": "-29.2009408",
+        "longitude": "-51.1938484",
+        "hora": "06:18",
+        "linha": "L108",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "4",
+        "latitude": "-29.199587",
+        "longitude": "-51.1964171",
+        "hora": "06:18",
+        "linha": "L108",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "5",
+        "latitude": "-29.1995918",
+        "longitude": "-51.1919567",
+        "hora": "06:18",
+        "linha": "L108",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "6",
+        "latitude": "-29.2026029",
+        "longitude": "-51.1844153",
+        "hora": "06:18",
+        "linha": "L108",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "7",
+        "latitude": "-29.2017074",
+        "longitude": "-51.1855883",
+        "hora": "06:18",
+        "linha": "L108",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "8",
+        "latitude": "-29.1944388",
+        "longitude": "-51.1937745",
+        "hora": "06:18",
+        "linha": "L108",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "9",
+        "latitude": "-29.1937551",
+        "longitude": "-51.194563",
+        "hora": "06:18",
+        "linha": "L108",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "10",
+        "latitude": "-29.1930075",
+        "longitude": "-51.1964444",
+        "hora": "06:18",
+        "linha": "L108",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "11",
+        "latitude": "-29.1844454",
+        "longitude": "-51.168498",
+        "hora": "06:18",
+        "linha": "L108",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "12",
+        "latitude": "-29.1162031",
+        "longitude": "-51.1122883",
+        "hora": "06:18",
+        "linha": "L108",
+        "prestadora": "Giratur"
+    }
+]

@@ -1,0 +1,98 @@
+[
+    {
+        "id": "1",
+        "latitude": "-29.4908016",
+        "longitude": "-51.3580318",
+        "hora": "05:30",
+        "linha": "L116",
+        "prestadora": "Nova Palmira"
+    },
+    {
+        "id": "2",
+        "latitude": "-29.4716649",
+        "longitude": "-51.3390195",
+        "hora": "05:30",
+        "linha": "L116",
+        "prestadora": "Nova Palmira"
+    },
+    {
+        "id": "3",
+        "latitude": "-29.4577616",
+        "longitude": "-51.3249127",
+        "hora": "05:30",
+        "linha": "L116",
+        "prestadora": "Nova Palmira"
+    },
+    {
+        "id": "4",
+        "latitude": "-29.4501469",
+        "longitude": "-51.3146753",
+        "hora": "05:30",
+        "linha": "L116",
+        "prestadora": "Nova Palmira"
+    },
+    {
+        "id": "5",
+        "latitude": "-29.4417476",
+        "longitude": "-51.3161481",
+        "hora": "05:30",
+        "linha": "L116",
+        "prestadora": "Nova Palmira"
+    },
+    {
+        "id": "6",
+        "latitude": "-29.4476407",
+        "longitude": "-51.3104264",
+        "hora": "05:30",
+        "linha": "L116",
+        "prestadora": "Nova Palmira"
+    },
+    {
+        "id": "7",
+        "latitude": "-29.4501714",
+        "longitude": "-51.308204",
+        "hora": "05:30",
+        "linha": "L116",
+        "prestadora": "Nova Palmira"
+    },
+    {
+        "id": "8",
+        "latitude": "-29.4026254",
+        "longitude": "-51.2667027",
+        "hora": "05:30",
+        "linha": "L116",
+        "prestadora": "Nova Palmira"
+    },
+    {
+        "id": "9",
+        "latitude": "-29.3982574",
+        "longitude": "-51.2665009",
+        "hora": "05:30",
+        "linha": "L116",
+        "prestadora": "Nova Palmira"
+    },
+    {
+        "id": "10",
+        "latitude": "-29.3983135",
+        "longitude": "-51.2652125",
+        "hora": "05:30",
+        "linha": "L116",
+        "prestadora": "Nova Palmira"
+    },
+    {
+        "id": "11",
+        "latitude": "-29.1844385",
+        "longitude": "-51.1684077",
+        "hora": "05:30",
+        "linha": "L116",
+        "prestadora": "Nova Palmira"
+    },
+    {
+        "id": "12",
+        "latitude": "-29.1161487",
+        "longitude": "-51.1125458",
+        "hora": "05:30",
+        "linha": "L116",
+        "prestadora": "Nova Palmira"
+    }
+]

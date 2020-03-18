@@ -1,0 +1,90 @@
+[
+    {
+        "id": "1",
+        "latitude": "-29.1638638",
+        "longitude": "-51.2291286",
+        "hora": "06:15",
+        "linha": "L105",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "2",
+        "latitude": "-29.1645065",
+        "longitude": "-51.2317205",
+        "hora": "06:15",
+        "linha": "L105",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "3",
+        "latitude": "-29.1659683",
+        "longitude": "-51.2352128",
+        "hora": "06:15",
+        "linha": "L105",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "4",
+        "latitude": "-29.1679074",
+        "longitude": "-51.2352606",
+        "hora": "06:15",
+        "linha": "L105",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "5",
+        "latitude": "-29.1673626",
+        "longitude": "-51.2317385",
+        "hora": "06:15",
+        "linha": "L105",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "6",
+        "latitude": "-29.1685394",
+        "longitude": "-51.2309693",
+        "hora": "06:15",
+        "linha": "L105",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "7",
+        "latitude": "-29.170458",
+        "longitude": "-51.2309149",
+        "hora": "06:15",
+        "linha": "L105",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "8",
+        "latitude": "-29.1712701",
+        "longitude": "-51.235078",
+        "hora": "06:15",
+        "linha": "L105",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "9",
+        "latitude": "-29.1721481",
+        "longitude": "-51.2352768",
+        "hora": "06:15",
+        "linha": "L105",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "10",
+        "latitude": "-29.1845886",
+        "longitude": "-51.1684867",
+        "hora": "06:15",
+        "linha": "L105",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "11",
+        "latitude": "-29.1161748",
+        "longitude": "-51.1122982",
+        "hora": "06:15",
+        "linha": "L105",
+        "prestadora": "Bragé"
+    }
+]

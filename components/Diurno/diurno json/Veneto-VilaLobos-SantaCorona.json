@@ -1,0 +1,170 @@
+[
+    {
+        "id": "1",
+        "latitude": "-29.2062726",
+        "longitude": "-51.1866289",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "2",
+        "latitude": "-29.2072536",
+        "longitude": "-51.1851671",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "3",
+        "latitude": "-29.2181679",
+        "longitude": "-51.1756518",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "4",
+        "latitude": "-29.2203532",
+        "longitude": "-51.1800689",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "5",
+        "latitude": "-29.2198991",
+        "longitude": "-51.1784945",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "6",
+        "latitude": "-29.2191032",
+        "longitude": "-51.1812411",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "7",
+        "latitude": "-29.2188317",
+        "longitude": "-51.1807797",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "8",
+        "latitude": "-29.2182745",
+        "longitude": "-51.1808334",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "9",
+        "latitude": "-29.2187083",
+        "longitude": "-51.1824687",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "10",
+        "latitude": "-29.2190032",
+        "longitude": "-51.183665",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "11",
+        "latitude": "-29.2189892",
+        "longitude": "-51.1853279",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "12",
+        "latitude": "-29.2191624",
+        "longitude": "-51.1865188",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "13",
+        "latitude": "-29.2190641",
+        "longitude": "-51.1874683",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "14",
+        "latitude": "-29.2039474",
+        "longitude": "-51.1719004",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "15",
+        "latitude": "-29.2072964",
+        "longitude": "-51.1714589",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "16",
+        "latitude": "-29.2071057",
+        "longitude": "-51.1745548",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "17",
+        "latitude": "-29.2059251",
+        "longitude": "-51.1745616",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "18",
+        "latitude": "-29.2043324",
+        "longitude": "-51.1747342",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "19",
+        "latitude": "-29.1935416",
+        "longitude": "-51.1797844",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "20",
+        "latitude": "-29.1843901",
+        "longitude": "-51.1683017",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "21",
+        "latitude": "-29.1162184",
+        "longitude": "-51.112309",
+        "hora": "05:55",
+        "linha": "L106",
+        "prestadora": "Caxiense"
+    }
+]

@@ -1,0 +1,90 @@
+[
+    {
+        "id": "1",
+        "latitude": "-28.9717503",
+        "longitude": "-51.0788695",
+        "hora": "06:25",
+        "linha": "L017",
+        "prestadora": "São Marcos"
+    },
+    {
+        "id": "2",
+        "latitude": "-28.9747386",
+        "longitude": "-51.0623553",
+        "hora": "06:25",
+        "linha": "L017",
+        "prestadora": "São Marcos"
+    },
+    {
+        "id": "3",
+        "latitude": "-28.9753909",
+        "longitude": "-51.06689",
+        "hora": "06:25",
+        "linha": "L017",
+        "prestadora": "São Marcos"
+    },
+    {
+        "id": "4",
+        "latitude": "-28.976145",
+        "longitude": "-51.0681333",
+        "hora": "06:25",
+        "linha": "L017",
+        "prestadora": "São Marcos"
+    },
+    {
+        "id": "5",
+        "latitude": "-28.9800476",
+        "longitude": "-51.0729595",
+        "hora": "06:25",
+        "linha": "L017",
+        "prestadora": "São Marcos"
+    },
+    {
+        "id": "6",
+        "latitude": "-29.0173258",
+        "longitude": "-51.0750954",
+        "hora": "06:25",
+        "linha": "L017",
+        "prestadora": "São Marcos"
+    },
+    {
+        "id": "7",
+        "latitude": "-29.0189822",
+        "longitude": "-51.0760463",
+        "hora": "06:25",
+        "linha": "L017",
+        "prestadora": "São Marcos"
+    },
+    {
+        "id": "8",
+        "latitude": "-29.0222692",
+        "longitude": "-51.0787809",
+        "hora": "06:25",
+        "linha": "L017",
+        "prestadora": "São Marcos"
+    },
+    {
+        "id": "9",
+        "latitude": "-29.0246494",
+        "longitude": "-51.0823622",
+        "hora": "06:25",
+        "linha": "L017",
+        "prestadora": "São Marcos"
+    },
+    {
+        "id": "10",
+        "latitude": "-29.0232078",
+        "longitude": "-51.0936502",
+        "hora": "06:25",
+        "linha": "L017",
+        "prestadora": "São Marcos"
+    },
+    {
+        "id": "11",
+        "latitude": "-29.116156",
+        "longitude": "-51.1123227",
+        "hora": "06:25",
+        "linha": "L017",
+        "prestadora": "São Marcos"
+    }
+]

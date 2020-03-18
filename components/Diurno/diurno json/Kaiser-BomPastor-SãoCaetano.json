@@ -1,0 +1,90 @@
+[
+    {
+        "id": "1",
+        "latitude": "-29.1914222",
+        "longitude": "-51.2072291",
+        "hora": "06:23",
+        "linha": "L041",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "2",
+        "latitude": "-29.1951252",
+        "longitude": "-51.2087503",
+        "hora": "06:23",
+        "linha": "L041",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "3",
+        "latitude": "-29.1960665",
+        "longitude": "-51.20731",
+        "hora": "06:23",
+        "linha": "L041",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "4",
+        "latitude": "-29.1967595",
+        "longitude": "-51.2044508",
+        "hora": "06:23",
+        "linha": "L041",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "5",
+        "latitude": "-29.2007381",
+        "longitude": "-51.206155",
+        "hora": "06:23",
+        "linha": "L041",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "6",
+        "latitude": "-29.200714",
+        "longitude": "-51.2083413",
+        "hora": "06:23",
+        "linha": "L041",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "7",
+        "latitude": "-29.200673",
+        "longitude": "-51.2103441",
+        "hora": "06:23",
+        "linha": "L041",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "8",
+        "latitude": "-29.1991439",
+        "longitude": "-51.2089413",
+        "hora": "06:23",
+        "linha": "L041",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "9",
+        "latitude": "-29.1991744",
+        "longitude": "-51.2069343",
+        "hora": "06:23",
+        "linha": "L041",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "10",
+        "latitude": "-29.1717706",
+        "longitude": "-51.1600591",
+        "hora": "06:23",
+        "linha": "L041",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "11",
+        "latitude": "-29.1161568",
+        "longitude": "-51.112291",
+        "hora": "06:23",
+        "linha": "L041",
+        "prestadora": "Caxiense"
+    }
+]

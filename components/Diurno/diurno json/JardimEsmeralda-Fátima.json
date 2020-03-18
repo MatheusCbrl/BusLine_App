@@ -1,0 +1,106 @@
+[
+    {
+        "id": "1",
+        "latitude": "-29.149166",
+        "longitude": "-51.1700541",
+        "hora": "06:40",
+        "linha": "L039",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "2",
+        "latitude": "-29.1427761",
+        "longitude": "-51.171984",
+        "hora": "06:40",
+        "linha": "L039",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "3",
+        "latitude": "-29.1408681",
+        "longitude": "-51.172794",
+        "hora": "06:40",
+        "linha": "L039",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "4",
+        "latitude": "-29.1413648",
+        "longitude": "-51.1754142",
+        "hora": "06:40",
+        "linha": "L039",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "5",
+        "latitude": "-29.1429691",
+        "longitude": "-51.1738142",
+        "hora": "06:40",
+        "linha": "L039",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "6",
+        "latitude": "-29.1439765",
+        "longitude": "-51.1737659",
+        "hora": "06:40",
+        "linha": "L039",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "7",
+        "latitude": "-29.1448246",
+        "longitude": "-51.1717275",
+        "hora": "06:40",
+        "linha": "L039",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "8",
+        "latitude": "-29.1474926",
+        "longitude": "-51.16635",
+        "hora": "06:40",
+        "linha": "L039",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "9",
+        "latitude": "-29.1515298",
+        "longitude": "-51.1624552",
+        "hora": "06:40",
+        "linha": "L039",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "10",
+        "latitude": "-29.1519719",
+        "longitude": "-51.1606755",
+        "hora": "06:40",
+        "linha": "L039",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "11",
+        "latitude": "-29.1518969",
+        "longitude": "-51.1589667",
+        "hora": "06:40",
+        "linha": "L039",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "12",
+        "latitude": "-29.1500185",
+        "longitude": "-51.1494744",
+        "hora": "06:40",
+        "linha": "L039",
+        "prestadora": "Caxiense"
+    },
+    {
+        "id": "13",
+        "latitude": "-29.1162195",
+        "longitude": "-51.1122453",
+        "hora": "06:40",
+        "linha": "L039",
+        "prestadora": "Caxiense"
+    }
+]

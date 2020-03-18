@@ -1,0 +1,122 @@
+[
+    {
+        "id": "1",
+        "latitude": "-29.1469711",
+        "longitude": "-51.219408",
+        "hora": "06:25",
+        "linha": "L015",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "2",
+        "latitude": "-29.1437596",
+        "longitude": "-51.2173366",
+        "hora": "06:25",
+        "linha": "L015",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "3",
+        "latitude": "-29.1418215",
+        "longitude": "-51.2170787",
+        "hora": "06:25",
+        "linha": "L015",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "4",
+        "latitude": "-29.1417655",
+        "longitude": "-51.2124066",
+        "hora": "06:25",
+        "linha": "L015",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "5",
+        "latitude": "-29.1411294",
+        "longitude": "-51.2100348",
+        "hora": "06:25",
+        "linha": "L015",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "6",
+        "latitude": "-29.1437757",
+        "longitude": "-51.2062048",
+        "hora": "06:25",
+        "linha": "L015",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "7",
+        "latitude": "-29.1406437",
+        "longitude": "-51.2048445",
+        "hora": "06:25",
+        "linha": "L015",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "8",
+        "latitude": "-29.1406263",
+        "longitude": "-51.1997912",
+        "hora": "06:25",
+        "linha": "L015",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "9",
+        "latitude": "-29.1377998",
+        "longitude": "-51.2007675",
+        "hora": "06:25",
+        "linha": "L015",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "10",
+        "latitude": "-29.1190025",
+        "longitude": "-51.1847662",
+        "hora": "06:25",
+        "linha": "L015",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "11",
+        "latitude": "-29.1202435",
+        "longitude": "-51.1822825",
+        "hora": "06:25",
+        "linha": "L015",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "12",
+        "latitude": "-29.121248",
+        "longitude": "-51.181249",
+        "hora": "06:25",
+        "linha": "L015",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "13",
+        "latitude": "-29.1214641",
+        "longitude": "-51.1796223",
+        "hora": "06:25",
+        "linha": "L015",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "14",
+        "latitude": "-29.1207096",
+        "longitude": "-51.1765141",
+        "hora": "06:25",
+        "linha": "L015",
+        "prestadora": "Giratur"
+    },
+    {
+        "id": "15",
+        "latitude": "-29.1207096",
+        "longitude": "-51.1122105",
+        "hora": "06:25",
+        "linha": "L015",
+        "prestadora": "Giratur"
+    }
+]

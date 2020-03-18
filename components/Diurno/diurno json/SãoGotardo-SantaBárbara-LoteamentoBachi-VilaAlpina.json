@@ -1,0 +1,194 @@
+[
+    {
+        "id": "1",
+        "latitude": "-29.0514698",
+        "longitude": "-51.0367681",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "2",
+        "latitude": "-29.0525243",
+        "longitude": "-51.0698516",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "3",
+        "latitude": "-29.0652934",
+        "longitude": "-51.0573301",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "4",
+        "latitude": "-29.0702614",
+        "longitude": "-51.0603615",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "5",
+        "latitude": "-29.0812133",
+        "longitude": "-51.0646502",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "6",
+        "latitude": "-29.0760512",
+        "longitude": "-51.0701882",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "7",
+        "latitude": "-29.075035",
+        "longitude": "-51.0719011",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "8",
+        "latitude": "-29.0806147",
+        "longitude": "-51.079396",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "9",
+        "latitude": "-29.0822012",
+        "longitude": "-51.0807968",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "10",
+        "latitude": "-29.0811698",
+        "longitude": "-51.0818053",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "11",
+        "latitude": "-29.0795287",
+        "longitude": "-51.0818565",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "12",
+        "latitude": "-29.0776464",
+        "longitude": "-51.0823634",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "13",
+        "latitude": "-29.0721676",
+        "longitude": "-51.0874752",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "14",
+        "latitude": "-29.0711411",
+        "longitude": "-51.0874423",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "15",
+        "latitude": "-29.0865122",
+        "longitude": "-51.0802202",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "16",
+        "latitude": "-29.0881686",
+        "longitude": "-51.0810118",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "17",
+        "latitude": "-29.0889322",
+        "longitude": "-51.0861473",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "18",
+        "latitude": "-29.1008505",
+        "longitude": "-51.0892727",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "19",
+        "latitude": "-29.0982823",
+        "longitude": "-51.0907476",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "20",
+        "latitude": "-29.1034195",
+        "longitude": "-51.0919143",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "21",
+        "latitude": "-29.1116558",
+        "longitude": "-51.0913147",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "22",
+        "latitude": "-29.1131034",
+        "longitude": "-51.0991187",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "23",
+        "latitude": "-29.1105364",
+        "longitude": "-51.1006155",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    },
+    {
+        "id": "24",
+        "latitude": "-29.116157",
+        "longitude": "-51.1123327",
+        "hora": "06:15",
+        "linha": "L005",
+        "prestadora": "Bragé"
+    }
+]
