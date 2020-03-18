@@ -1,0 +1,266 @@
+import React, { Component } from 'react';
+import {
+  Alert,
+  Text,
+  View,
+  StyleSheet,
+  Image,
+  KeyboardAvoidingView,
+  TouchableHighlight,
+  Button,
+  TextInput,
+} from 'react-native';
+
+export default class App extends Component {
+  static navigationOptions = {
+    title: 'Client Login',
+    headerStyle: {
+      backgroundColor: '#73C6B6',
+    },
+  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+      baseURL: '',
+    };
+    this._authunticate = this._authunticate.bind(this);
+  }
+
+   _authunticate(password) {
+     const value = this.state.password
+      console.log('CPF: ',value)
+    fetch('https://rhconnect.marcopolo.com.br/api/requests/employees/getcpf/'+this.state.password, {
+      method: 'GET',
+      headers: {
+            'Accept': 'application/json',    
+            'Authorization': '',
+      },
+    })
+      .then(r => r.json())
+      .then(([statusCode, data]) => {
+        console.log([data,statusCode]);
+        if (statusCode === 200)
+          //this.props.navigation.navigate('Diurno');
+           console.log('yesss Entrou ',statusCode,data);
+      })
+      .catch(error => {
+        console.error('Ocorreu um erro no login. ',error);
+      });
+  }
+
+  render() {
+    return (
+      <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
+        <View style={styles.container} behavior="padding">
+          <View style={styles.textInput}>
+            <TextInput
+              style={{
+                fontSize: 25,
+                height: 50,
+                flex: 1,
+                color: 'white',
+              }}
+              autoCorrect={false}
+              spellCheck={false}
+              underlineColorAndroid="transparent"
+              placeholder="CPF"
+              inputType="numeric"
+              placeholderTextColor="white"
+              onChangeText={password => this.setState({ password })}
+            />
+          </View>
+          <View style={{ marginTop: 15 }}>
+            <Button
+              title="ENTRAR"
+              onPress={this._authunticate}
+              color="#606070"
+            />
+          </View>
+        </View>
+      </KeyboardAvoidingView>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    backgroundColor: 'WHITE',
+    padding: 20,
+  },
+  textInput: {
+    alignItems: 'center',
+    borderRadius: 10,
+    flexDirection: 'row',
+    borderWidth: 0.5,
+    paddingLeft: 15,
+    paddingRigth: 15,
+    marginBottom: 10,
+    marginTop: 190,
+    backgroundColor: '#686C7E',
+  },
+});
+
+
+
+
+
+import React, { Component } from 'react';
+import {
+  Alert,
+  Text,
+  View,
+  StyleSheet,
+  Image,
+  KeyboardAvoidingView,
+  TouchableHighlight,
+  Button,
+  TextInput,
+} from 'react-native';
+import { Constants } from 'expo';
+import Home from './Home';
+import { createDrawerNavigator, createAppContainer } from 'react-navigation';
+
+export default class App extends Component {
+  static navigationOptions = {
+    title: 'Client Login',
+    headerStyle: {
+      backgroundColor: '#73C6B6',
+    },
+  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+      username: '',
+      baseURL: '',
+    };
+    this.fetchLogin = this.fetchLogin.bind(this);
+  }
+
+  //fetch user login
+  fetchLogin() {
+    var that = this;
+    var url = 'http://192.168.1.134:88/Nh-31/NH31-release-1.0/public/api/login';
+    var user = { email: this.state.email, password: this.state.password };
+    var usern = '';
+    var status = 'error';
+    var baseURL = '';
+    var email = this.state.email;
+    //console.log(user);
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    })
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(result) {
+        if (!result.error) {
+          that.setState({ status: result.error, wholeResult: result });
+          alert('Login Successful - ok');
+          //console.log(result)
+          console.log(this.props.navigation.navigate('Home'));
+        } else {
+          alert('Incorrect Login Details');
+          console.log(result);
+        }
+      })
+      .catch(function(error) {
+        console.log('-------- error ------- ' + error);
+        alert('result:' + error);
+      });
+  }
+
+  CheckTextInput = () => {
+    //Handler for the Submit onPress
+    if (this.state.email != '') {
+      //Check for the Name TextInput
+      if (this.state.password != '') {
+        //Check for the Email TextInput
+        //this.props.navigation.push("Profile")}
+        this.fetchLogin();
+      } else {
+        alert('Please Enter Password');
+      }
+    } else {
+      alert('Please Enter email');
+    }
+  };
+  render() {
+    return (
+      <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
+        <View style={styles.container} behavior="padding">
+          <View style={styles.textInput}>
+            <TextInput
+              style={{
+                fontSize: 25,
+                height: 50,
+                flex: 1,
+                color: 'white',
+              }}
+              autoCorrect={false}
+              spellCheck={false}
+              underlineColorAndroid="transparent"
+              placeholder="Enter your Email"
+              placeholderTextColor="white"
+              onChangeText={email => this.setState({ email })}
+            />
+          </View>
+          <View style={styles.textInput}>
+            <TextInput
+              style={{
+                fontSize: 25,
+                height: 50,
+                flex: 1,
+                color: 'white',
+              }}
+              autoCorrect={false}
+              spellCheck={false}
+              secureTextEntry={true}
+              placeholder="Enter Password"
+              onChangeText={password => this.setState({ password })}
+              underlineColorAndroid="transparent"
+            />
+          </View>
+          <View style={{ marginTop: 15 }}>
+            <Button
+              title="Submit"
+              onPress={this.CheckTextInput}
+              color="#606070"
+            />
+          </View>
+        </View>
+      </KeyboardAvoidingView>
+    );
+  }
+}
+
+//module.exports = LoginUser;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    backgroundColor: 'lightgreen',
+    padding: 20,
+  },
+  textInput: {
+    alignItems: 'center',
+    borderRadius: 10,
+    flexDirection: 'row',
+    borderWidth: 0.5,
+    paddingLeft: 15,
+    paddingRigth: 15,
+    marginBottom: 10,
+    backgroundColor: '#686C7E',
+  },
+});
+

@@ -1,0 +1,276 @@
+/* @flow */
+
+import React from 'react';
+import {
+  Linking,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  Dimensions,
+  Platform
+} from 'react-native';
+import { Camera } from 'expo-camera';
+import * as Permissions from 'expo-permissions';
+import { BarCodeScanner } from 'expo-barcode-scanner';
+import {
+  isIphoneX,
+  getStatusBarHeight,
+  getBottomSpace,
+} from 'react-native-iphone-x-helper';
+
+const width = Dimensions.get('window').width;
+const height = Dimensions.get('window').height;
+
+export default class BarCodeScreen extends React.Component {
+  static navigationOptions = {
+    header: null,
+  };
+
+  state = {
+    scannerIsVisible: true,
+    hasCameraPermission: null,
+    type: Camera.Constants.Type.back,
+  };
+
+  _hasOpenedUrl;
+  _isMounted;
+
+  componentWillMount() {
+    this._hasOpenedUrl = false;
+  }
+
+  async componentDidMount() {
+    this._isMounted = true;
+    await this.checkCamera();
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
+  checkCamera = async () => {
+    const { status } = await Permissions.askAsync(Permissions.CAMERA);
+    this.setState({ hasCameraPermission: status === 'granted' });
+  };
+
+  render() {
+    const { hasCameraPermission } = this.state;
+    if (hasCameraPermission === null) {
+      return <View />;
+    } else if (hasCameraPermission === false) {
+      return (
+        <View
+          style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          <Text>No access to camera</Text>
+        </View>
+      );
+    } else {
+      return (
+        <View style={styles.container}>
+          {this.state.scannerIsVisible ? (
+            <Camera
+              barCodeScannerSettings={{
+                barCodeTypes: [BarCodeScanner.Constants.BarCodeType.qr],
+              }}
+              onBarCodeScanned={this.handleBarCodeScanned}
+              style={StyleSheet.absoluteFill}
+            />
+          ) : null}
+
+          <View style={styles.topOverlay} />
+          <View style={styles.leftOverlay} />
+          <View style={styles.rightOverlay} />
+          <View style={styles.bottomOverlay} />
+          <View style={styles.topLeftCorner} />
+          <View style={styles.topRightCorner} />
+          <View style={styles.bottomLeftCorner} />
+          <View style={styles.bottomRightCorner} />
+
+          <View style={styles.header}>
+            <Text style={styles.headerText}>MARCAR PRESENÇA</Text>
+          </View>
+
+          <View style={styles.footer}>
+            <TouchableOpacity
+              onPress={() => this._openUrl('http://social.network')}
+              hitSlop={{ top: 80, bottom: 80, right: 80, left: 80 }}>
+              <Text style={styles.cancelText}>VOLTAR</Text>
+            </TouchableOpacity>
+          </View>
+
+        <StatusBar
+          barStyle="dark-content"
+          // dark-content, light-content and default
+          hidden={Platform.OS === 'ios' ? false : true}
+          //To hide statusBar
+          backgroundColor="transparent"
+          //Background color of statusBar
+          translucent={true}
+          //allowing light, but not detailed shapes
+          networkActivityIndicatorVisible={false}
+        />
+        </View>
+      );
+    }
+  }
+
+  handleBarCodeScanned = ({ type, data: url }) => {
+    this.setState({ scannerIsVisible: false }, () => {
+      if (this._isMounted) {
+        this._openUrl(url);
+      }
+    });
+  };
+
+  _openUrl = url => {
+    // this.props.navigation.pop();
+
+    setTimeout(() => {
+      // note(brentvatne): Manually reset the status bar before opening the
+      // experience so that we restore the correct status bar color when
+      // returning to home
+      StatusBar.setBarStyle('default');
+
+      if (!this._hasOpenedUrl) {
+        this._hasOpenedUrl = true;
+
+        Linking.canOpenURL(url)
+          .then(supported => {
+            if (!supported) {
+              console.log("Can't handle url: " + url);
+            } else {
+              return Linking.openURL(url);
+            }
+          })
+          .catch(err => console.error('An error occurred', err));
+      }
+    }, 16);
+  };
+
+  _handlePressCancel = () => {
+    this.props.navigation.pop();
+  };
+}
+
+const BOX_MARGIN = 60;
+const BOX_SIZE = width - BOX_MARGIN * 2;
+const BOX_TOP = height / 2 - BOX_SIZE / 2;
+const BOX_BOTTOM = BOX_TOP + BOX_SIZE;
+const BOX_LEFT = BOX_MARGIN;
+const BOX_RIGHT = width - BOX_MARGIN;
+
+const overlayBaseStyle = {
+  position: 'absolute',
+  backgroundColor: 'rgba(0,0,0,0.8)',
+};
+
+const cornerBaseStyle = {
+  position: 'absolute',
+  borderColor: '#FF3D00',
+  backgroundColor: 'transparent',
+  borderWidth: 8,
+  width: 64,
+  height: 64,
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+  },
+  topLeftCorner: {
+    ...cornerBaseStyle,
+    top: BOX_TOP - 1,
+    left: BOX_MARGIN - 1,
+    borderBottomWidth: 0,
+    borderRightWidth: 0,
+  },
+  topRightCorner: {
+    ...cornerBaseStyle,
+    top: BOX_TOP - 1,
+    right: BOX_MARGIN - 1,
+    borderBottomWidth: 0,
+    borderLeftWidth: 0,
+  },
+  bottomLeftCorner: {
+    ...cornerBaseStyle,
+    bottom: height - BOX_BOTTOM - 1,
+    left: BOX_MARGIN - 1,
+    borderTopWidth: 0,
+    borderRightWidth: 0,
+  },
+  bottomRightCorner: {
+    ...cornerBaseStyle,
+    bottom: height - BOX_BOTTOM - 1,
+    right: BOX_MARGIN - 1,
+    borderTopWidth: 0,
+    borderLeftWidth: 0,
+  },
+  topOverlay: {
+    ...overlayBaseStyle,
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: height - BOX_TOP,
+  },
+  leftOverlay: {
+    ...overlayBaseStyle,
+    top: BOX_TOP,
+    left: 0,
+    right: BOX_RIGHT,
+    bottom: height - BOX_BOTTOM,
+  },
+  rightOverlay: {
+    ...overlayBaseStyle,
+    top: BOX_TOP,
+    left: BOX_RIGHT,
+    right: 0,
+    bottom: height - BOX_BOTTOM,
+  },
+  bottomOverlay: {
+    ...overlayBaseStyle,
+    top: BOX_BOTTOM,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+  header: {
+    position: 'absolute',
+    top: isIphoneX ? 50 : 40,
+    left: 0,
+    right: 0,
+    alignItems: 'center',
+  },
+  headerText: {
+    color: '#fff',
+    backgroundColor: 'transparent',
+    fontSize: 14,
+    letterSpacing: 0.3,
+    textAlign: 'center',
+
+    lineHeight: 17,
+  },
+  footer: {
+    position: 'absolute',
+    bottom: isIphoneX ? 50 : 30,
+    left: 0,
+    right: 0,
+    alignItems: 'center',
+  },
+  cancelText: {
+    fontSize: 14,
+    letterSpacing: 0.3,
+    textAlign: 'center',
+    color: '#ffffff',
+    backgroundColor: 'transparent',
+  },
+});
+
+
+{
+  "dependencies": {
+    "react-native-paper": "2.15.2",
+    "react-native-iphone-x-helper": "1.2.1"
+  }
+}
