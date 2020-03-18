@@ -1,0 +1,184 @@
+API controle de entrada:
+
+https://rhconnect.marcopolo.com.br/api/requests/employees/acess_employee/<EMPRESA>/<MATRICULA>
+
+- Permitir uma lista de matrículas como parâmetro de entrada + empresa + data (de/até) como parâmetro de entrada
+
+API Integração Dados do colaborador:
+
+https://rhconnect.marcopolo.com.br/api/requests/employees/access_data_employee/<EMPRESA>/<COD_SETOR>/<MATRICULA>
+
+- Ser possível informar uma lista de matrículas como parâmetro de entrada ou Empresa + Filial + Cód_Setor.
+
+API Treinamentos:
+
+https://rhconnect.marcopolo.com.br/api/requests/employees/employee_train/<EMPRESA>/<MATRICULA>
+
+- Incluir o código do treinamento como parâmetro de entrada e como resultado
+
+
+
+
+API controle de entrada:
+
+@api_view(['POST'])
+def acess_employee(request):
+    """
+     coletar dados de acesso do colaborador
+    """
+
+    try:
+        data = request.body.decode('utf-8')
+        data = json.loads(data)
+    except Exception as e:
+        print("--> Something goes wrong: " + str(e))
+        return Response(data={'response': e}, status=status.HTTP_400_BAD_REQUEST)
+
+    data_init = data['data_init']
+    data_fin = data['data_fin']
+
+    data = data['matriculas']
+    data = data.split(',')
+    for valor in data:
+        emp_cod = valor.split('-')[0]
+        matricula = valor.split('-')[1]
+
+        cursor = connections['rh'].cursor()
+
+        try:
+            cursor.execute(''
+
+                            SELECT v.COD_EMPRESA, V.MATRICULA, V.NOME_PESSOA, V.DATA_ACESSO, v.TIPO_ACESSO, V.COD_RELOGIO 
+                            FROM V_ACESSOS_PESSOAS V
+                            WHERE V.tipo_acesso <> 'R'
+                              and V.data_acesso >= %s
+                              and V.data_acesso <= %s
+                              and v.COD_EMPRESA = nvl(%s,v.COD_EMPRESA)
+                              and v.MATRICULA = nvl(%s,v.MATRICULA)
+                              AND COD_RELOGIO IN (2014,2070,2071,2072,2073,2074,2075,2076,2077,2078,2079,2080,2081,2082)
+                              
+                              
+                            --NEOBUS ,2401,2402,2403,2404,2405,2406,2407)
+                            order by 2, V.data_acesso desc
+
+
+                        ''', [str(emp_cod),
+                              str(matricula),
+                              str(data_init),
+                              str(data_fin)])
+
+            status = 'Thats all, folks!'
+
+        except Exception as e:
+            print("Algo deu errado: ", str(e))
+            status = str(e)
+            
+        cursor.close()
+       cursor.close()
+
+    return Response(status)
+ dados = []
+    for d in data:
+        dados.append({
+            "COD_EMPRESA": d[0],
+            "MATRICULA":   d[1],
+            "NOME_PESSOA": d[2],
+            "DATA_ACESSO": d[3],
+            "TIPO_ACESSO": d[4],
+            "COD_RELOGIO": d[5]
+        })
+
+    return Response(dados)
+
+
+
+API Integração Dados do colaborador:
+
+@api_view(['GET'])
+def access_data_employee(request, company, sector, badge):
+    """
+    coletar dados de relevantes do colaborador incluindo o cracha
+    """
+data = data['matriculas']
+    data = data.split(',')
+    for valor in data:
+        emp_cod = valor.split('-')[0]
+        matricula = valor.split('-')[1]
+
+    cursor = connections['rh'].cursor()
+
+    try:
+        cursor.execute('''
+						 SELECT INF.COD_EMPRESA_FUNCIONARIO,
+								INF.COD_FUNCIONARIO,
+								INF.NOME_FUNCIONARIO,
+								INF.NOME_REDUZIDO,
+								INF.MATRICULA,
+								INF.DATA_NASCIMENTO,
+								INF.DATA_ADMISSAO,
+								INF.CONTROLA_PONTO,
+								INF.COMPENSACAO,
+								INF.COD_CARTAO,
+								INF.COD_CARTAO_TEMPORARIO,
+								INF.COD_SETOR_PONTO,
+								INF.NOME_SETOR_PONTO,
+								CF.CAR_COD,
+								C.NOME DES_CARGO,
+								INF.NOME_EMPRESA,
+								INF.CNPJ,
+								INF.COD_TURNO,
+								INF.EMAIL,
+								INF.COD_FILIAL,
+								INF.NRO_PIS,
+								INF.COD_MAO_OBRA,
+								INF.DESCR_MAO_OBRA
+						   FROM INFORMACOES_FUNCIONARIOS INF
+							  , CADASTRO_FUNCIONAL_TAB CF
+							  , CARGOS C
+						  WHERE INF.COD_EMPRESA_FUNCIONARIO = %s
+						    AND INF.COD_SETOR_PONTO = NVL(%s,INF.COD_SETOR_PONTO)
+						    AND INF.MATRICULA = NVL(%s,INF.MATRICULA)
+						    AND INF.DATA_DEMISSAO IS NULL
+						    AND CF.EMP_COD = INF.COD_EMPRESA_FUNCIONARIO
+						    AND CF.CHAPA = INF.MATRICULA
+						    AND C.EMP_COD = CF.CAR_EMP_COD
+						    AND C.COD = CF.CAR_COD
+
+
+                        ''', [int(company), int(sector), int(badge)])
+
+        data = cursor.fetchall()
+
+    except Exception as e:
+        print("Algo deu errado: ", str(e))
+        data = []
+  
+    dados = []
+    for d in data:
+        dados.append({
+            "COD_EMPRESA_FUNCIONARIO": d[0],
+            "COD_FUNCIONARIO": d[1],
+            "NOME_FUNCIONARIO": d[2],
+            "NOME_REDUZIDO": d[3],
+            "MATRICULA": d[4],
+            "DATA_NASCIMENTO": d[5],
+			"DATA_ADMISSAO": d[6],
+			"CONTROLA_PONTO": d[7],
+			"COMPENSACAO": d[8],
+			"COD_CARTAO": d[9],
+			"COD_CARTAO_TEMPORARIO": d[10],
+			"COD_SETOR_PONTO": d[11],
+			"NOME_SETOR_PONTO": d[12],
+			"CAR_COD": d[13],
+			"DES_CARGO": d[14],
+			"NOME_EMPRESA": d[15],
+			"CNPJ": d[16],
+			"COD_TURNO": d[17],
+			"EMAIL": d[18],
+			"COD_FILIAL": d[19],
+			"NRO_PIS": d[20],
+			"COD_MAO_OBRA": d[21],
+			"DESCR_MAO_OBRA": d[22]			
+        })
+
+    return Response(dados)
