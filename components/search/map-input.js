@@ -50,7 +50,7 @@ class MapInput extends React.Component {
         styles={{
           container: {
             position: 'absolute',
-            top: Platform.select({ ios: 30, android: 25 }),
+            top: Platform.select({ ios: 30, android: 35 }),
             width: '100%',
           },
           textInputContainer: {
