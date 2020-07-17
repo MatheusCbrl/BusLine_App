@@ -147,7 +147,7 @@ export default class screens extends Component {
         <StatusBar
           barStyle="dark-content"
           // dark-content, light-content and default
-          hidden={Platform.OS === 'ios' ? false : true}
+          //hidden={Platform.OS === 'ios' ? false : true}
           //To hide statusBar
           backgroundColor="transparent"
           //Background color of statusBar
@@ -213,7 +213,7 @@ export default class screens extends Component {
               source={require('../../assets/back.png')}
               style={{
                 marginLeft: 10,
-                marginTop: 15,
+                marginTop: 30,
                 width: 25,
                 height: 25,
                 tintColor: '#FF3D00',
@@ -251,12 +251,12 @@ export default class screens extends Component {
                     A partir de: {markers.hora}
                   </Text>
                   <Text numberOfLines={1} style={styles.text1}>
-                    
+
                   </Text>
                   <Image
                     source={require('../../assets/drag.png')}
                     style={{
-                      marginLeft: Dimensions.get('window').width / 1.5, 
+                      marginLeft: Dimensions.get('window').width / 1.5,
                       width: 65,
                       height: 65,
                       tintColor: '#FF3D00',
