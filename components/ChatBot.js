@@ -161,7 +161,15 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, backgroundColor: '#fff' }}>
-        <StatusBar hidden />
+       <StatusBar
+          barStyle="dark-content"
+          // dark-content, light-content and default
+          backgroundColor="transparent"
+          //Background color of statusBar
+          translucent={true}
+          //allowing light, but not detailed shapes
+          networkActivityIndicatorVisible={false}
+        />
         <View style={{ backgroundColor: '#fff' }}>
           <TouchableOpacity
           onPress={() => this.props.navigation.navigate('Ajuda')}>
@@ -177,7 +185,7 @@ export default class App extends React.Component {
               }}
             />
           </TouchableOpacity>
-          <Text style={{ fontSize: 15, color: '#aaa', textAlign: 'center' }}>
+          <Text style={{ top: 50, fontSize: 15, color: '#aaa', textAlign: 'center' }}>
             💬 Olá, Como posso ajudar?
           </Text>
         </View>
@@ -189,7 +197,6 @@ export default class App extends React.Component {
           renderSystemMessage={this.renderSystemMessage}
           renderSend={this.renderSend}
           renderBubble={this.renderBubble}
-          renderFooter ={'Digitando...'}
           inverted={true}
           renderAvatar={null}
           locale="pt-BR"

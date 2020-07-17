@@ -693,7 +693,7 @@ export default class App extends React.Component {
         <StatusBar
           barStyle="dark-content"
           // dark-content, light-content and default
-          hidden={Platform.OS === 'ios' ? false : true}
+          //hidden={Platform.OS === 'ios' ? false : true}
           //To hide statusBar
           backgroundColor="transparent"
           //Background color of statusBar
@@ -706,7 +706,7 @@ export default class App extends React.Component {
             {/*Donute Button Image */}
             <Image
               source={require('../assets/back.png')}
-              style={{ marginLeft: 10, marginTop: 15, width: 25, height: 25, tintColor: '#FF3D00' }}
+              style={{ marginLeft: 10, marginTop: 25, width: 25, height: 25, tintColor: '#FF3D00' }}
             />
           </TouchableOpacity>
           <Modal

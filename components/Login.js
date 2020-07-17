@@ -90,7 +90,17 @@ export default class LoginScreen extends React.Component {
         style={[{ backgroundColor: bgColor }, styles.wrapper]}
         behavior="padding">
         <View style={styles.scrollViewWrapper}>
-          <StatusBar hidden />
+        <StatusBar
+          barStyle="dark-content"
+          // dark-content, light-content and default
+          //hidden={Platform.OS === 'ios' ? false : true}
+          //To hide statusBar
+          backgroundColor="transparent"
+          //Background color of statusBar
+          translucent={true}
+          //allowing light, but not detailed shapes
+          networkActivityIndicatorVisible={false}
+        />
           <ScrollView style={styles.scrollView}>
             <Image
               resizeMode="contain"

@@ -13,6 +13,7 @@ import {
   AsyncStorage,
   BackHandler,
   SafeAreaView,
+  Animated,
 } from 'react-native';
 import {
   getLocation,
@@ -25,21 +26,28 @@ import Modal from 'react-native-modal';
 import { ContainerTop, TypeDescription, ContainerTab } from './stylesInfo.js';
 import night from '../assets/night.png';
 import Geocoder from 'react-native-geocoding';
-import { withNavigation } from 'react-navigation';
 import down from '../assets/two-down-arrows.png';
 import sun from '../assets/sun.png';
 import tur from '../assets/dayNight.png';
+import geolocationService from './services/geolocationService';
 const { width, height } = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
 const LATITUDE = -29.1684796;
 const LONGITUDE = -51.1793861;
 const LATITUDE_DELTA = 0.003;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
+const ADDRESS_HEIGHT = 130;
+
 Geocoder.init('AIzaSyBqKPYXiV7BlP65rt4SbKmRHrCYAkqh7j0');
+
 export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
+      location: null,
+      info: "",
+      isAddressVisible: true,
+      translateY: new Animated.Value(ADDRESS_HEIGHT),
       focusedlocation: {
         latitude: LATITUDE,
         longitude: LONGITUDE,
@@ -63,10 +71,31 @@ export default class App extends React.Component {
       duration: null,
       location: null,
       open: false,
+
     };
     this.switchMapType = this.switchMapType.bind(this);
   }
-
+  //================================================================================
+  handleMapPress = event => {
+    const { isAddressVisible, translateY, location,info } = this.state;
+    //event.stopPropagation();
+    this.setState({
+      isAddressVisible: true
+    });
+    console.log("show address and animationn")
+    this.getInfo(event.nativeEvent.coordinate);
+    this.pickLocationHandler(event);
+  };
+  getInfo = async coordinate => {
+    console.log("coordinates: ", coordinate)
+    const response = await geolocationService.fetchInfo(coordinate);
+    console.log("Dados recebidos: ", response)
+    this.setState({
+      info: response
+    });
+    
+  }
+  //=================================================================================
   async componentDidMount() {
     navigator.geolocation.getCurrentPosition(
       async ({ coords: { latitude, longitude } }) => {
@@ -100,7 +129,7 @@ export default class App extends React.Component {
       this.backHandler
     );
     return fetch(
-      'https://gist.githubusercontent.com/MatheusCbrl/bba7db1c0dbc68be2f26d5c7e15649b6/raw/9b97e6ece4ab12a88babd87229fc292180730034/ParadasDiurno.json'
+      'https://gist.githubusercontent.com/MatheusCbrl/bba7db1c0dbc68be2f26d5c7e15649b6/raw/a8023bbab6cef3c372b0be9a207418b506fb0510/ParadasDiurno.json'
     )
       .then(response => response.json())
       .then(responseJson => {
@@ -113,6 +142,7 @@ export default class App extends React.Component {
       .catch(error => {
         console.error(error);
       });
+      
   }
 
   onMapReady = () => {
@@ -191,6 +221,7 @@ export default class App extends React.Component {
         locationChosen: true,
       };
     });
+    
   };
 
   getLocationHandler = () => {
@@ -208,6 +239,7 @@ export default class App extends React.Component {
         };
 
         this.pickLocationHandler(coordsEvent);
+        this.handleMapPress(coordsEvent);
       },
       err => {
         console.log(err);
@@ -242,7 +274,9 @@ export default class App extends React.Component {
         };
         return (
           <MapView.Marker
-            onPress={this.pickLocationHandler}
+          
+            //onPress={this.pickLocationHandler}
+            onPress={this.handleMapPress}
             ref={mark => (marker.mark = mark)}
             key={index}
             title={marker.linha + ' - ' + marker.prestadora}
@@ -282,13 +316,14 @@ export default class App extends React.Component {
     });
   };
   render() {
-    const { showAlert, destination, duration, region, location } = this.state;
+    const { showAlert, destination, duration, region, info, location, translateY } = this.state;
+
     return (
       <View style={styles.container} {...this.props}>
         <StatusBar
           barStyle="dark-content"
           // dark-content, light-content and default
-          hidden={Platform.OS === 'ios' ? false : true}
+          //hidden={Platform.OS === 'ios' ? false : true}
           //To hide statusBar
           backgroundColor="transparent"
           //Background color of statusBar
@@ -315,14 +350,23 @@ export default class App extends React.Component {
             showsBuildings={false}
             followsUserLocation={false}
             showsTraffic={false}
-            initialRegion={this.state.focusedlocation}>
+            initialRegion={this.state.focusedlocation}
+            >
             {this.renderMarkers()}
             <MapView.Marker
-              onPress={this.pickLocationHandler}
+              onPress={this.handleMapPress}
               pinColor={'orange'}
               coordinate={this.state.region}
             />
           </MapView>
+          <View style={styles.address}>
+            <Text style={styles.city}>{info && info.address.city} {info && info.address.town} </Text>
+            <Text >Bairro: {info && info.address.suburb }</Text>
+            <Text >Rua: {info && info.address.road} {info && info.address.house_number}</Text>
+            <Text>CEP: {info && info.address.postcode}</Text>
+            <Text >{info && info.address.state} - {info && info.address.country} . {info && info.address.neighbourhood}</Text>
+            
+          </View>
           <MapInput style={{ flex: 1, position: 'absolute' }} notifyChange={loc => this.getCoordsFromName(loc)} />
           <ContainerTab>
             <View style={styles.appbar}>
@@ -639,7 +683,7 @@ const styles = StyleSheet.create({
   },
   fab2: {
     position: 'absolute',
-    bottom: 250,
+    bottom: 200,
     height: 55,
     width: 55,
     borderRadius: 30,
@@ -651,7 +695,7 @@ const styles = StyleSheet.create({
   },
   fab3: {
     position: 'absolute',
-    bottom: 300,
+    bottom: 250,
     height: 55,
     width: 55,
     borderRadius: 30,
@@ -702,4 +746,22 @@ const styles = StyleSheet.create({
     fontSize: 16,
     alignItems: 'center',
   },
+  address: {
+    position: 'absolute',
+    borderBottomLeftRadius: 15,
+    borderBottomRightRadius: 15,
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+    height: ADDRESS_HEIGHT,
+    width: 250,
+    bottom: 55,
+    marginLeft:10,
+    backgroundColor: '#e5e5e5',
+    padding: 4,
+  },
+  city: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#FF3D00',
+  }
 });

@@ -18,8 +18,6 @@ import email from 'react-native-email';
 const MIN_HEIGHT = 80;
 const MAX_HEIGHT = 270;
 
-
-
 const styles = StyleSheet.create({
   image: {
     height: 40,
@@ -42,7 +40,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#FF3D00',
     backgroundColor: 'white',
-    
   },
   sectionTitle: {
     fontSize: 18,
@@ -51,7 +48,7 @@ const styles = StyleSheet.create({
   },
   sectionContent: {
     fontSize: 16,
-    borderTopEndRadius: 35, 
+    borderTopEndRadius: 35,
     textAlign: 'justify',
   },
   keywords: {
@@ -86,33 +83,32 @@ const styles = StyleSheet.create({
     height: MIN_HEIGHT,
     justifyContent: 'center',
     //alignItems: 'center',
-    paddingTop: 16,
+    paddingTop: 35,
     marginLeft: 10,
     opacity: 0,
   },
   navTitle: {
     color: 'white',
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
     backgroundColor: 'transparent',
   },
   sectionLarge: {
-    height: 400,    
+    height: 400,
   },
-    imageButtonTitle: {
+  imageButtonTitle: {
     marginLeft: 5,
-    width: 25, 
-    height: 25
+    width: 25,
+    height: 25,
   },
-  imageButtonForeground:{
+  imageButtonForeground: {
     tintColor: 'white',
     marginLeft: 10,
-    marginBottom: 5,
-    width: 25, 
-    height: 25
-  }
+    marginBottom: 0,
+    width: 20,
+    height: 20,
+  },
 });
-
 
 class Sobre extends Component {
   constructor() {
@@ -120,24 +116,31 @@ class Sobre extends Component {
     this.state = { showNavTitle: false };
   }
 
-handleEmail = () => {
-    const to = ['matheus.cabral@marcopolo.com.br'] // string or array of email addresses to = ['matheus.cabral@marcopolo.com', 'outronome@bar.com'] 
+  handleEmail = () => {
+    const to = ['matheus.cabral@marcopolo.com.br']; // string or array of email addresses to = ['matheus.cabral@marcopolo.com', 'outronome@bar.com']
     email(to, {
-        // Optional additional arguments
-        //cc: ['bazzy@moo.com', 'doooo@daaa.com'], // string or array of email addresses
-        //bcc: 'mee@mee.com', // string or array of email addresses
-        subject: 'Dúvidas ou sugestões para o App',
-        body: 'Digite sua mensagem aqui'
-    }).catch(console.error)
-}
+      // Optional additional arguments
+      //cc: ['bazzy@moo.com', 'doooo@daaa.com'], // string or array of email addresses
+      //bcc: 'mee@mee.com', // string or array of email addresses
+      subject: 'Dúvidas ou sugestões para o App',
+      body: 'Digite sua mensagem aqui',
+    }).catch(console.error);
+  };
 
   render() {
-
     return (
-
       <View style={{ flex: 1 }}>
-        
-         <StatusBar hidden />
+        <StatusBar
+          barStyle="dark-content"
+          // dark-content, light-content and default
+          //hidden={Platform.OS === 'ios' ? false : true}
+          //To hide statusBar
+          backgroundColor="transparent"
+          //Background color of statusBar
+          translucent={true}
+          //allowing light, but not detailed shapes
+          networkActivityIndicatorVisible={false}
+        />
         <HeaderImageScrollView
           showsVerticalScrollIndicator={false}
           maxHeight={MAX_HEIGHT}
@@ -147,34 +150,44 @@ handleEmail = () => {
           fadeOutForeground
           disableHeaderGrow={false}
           renderHeader={() => (
-            <Image source={texto.image} style={styles.image} 
-             />
+            <Image source={texto.image} style={styles.image} />
           )}
           renderFixedForeground={() => (
             <Animatable.View
               style={styles.navTitleView}
-              ref={navTitleView => {
+              ref={(navTitleView) => {
                 this.navTitleView = navTitleView;
-              }}>
-              <TouchableOpacity  onPress={() =>this.props.navigation.navigate('Diurno')}> 
-              <Image source={require('../assets/back.png')} style={styles.imageButtonForeground}/> 
-              </TouchableOpacity> 
-              <Text style={styles.navTitle}>
-                {texto.title}
-              </Text>
+              }}
+            >
+              <TouchableOpacity
+                onPress={() => this.props.navigation.navigate('Diurno')}
+              >
+                <Image
+                  source={require('../assets/back.png')}
+                  style={styles.imageButtonForeground}
+                />
+              </TouchableOpacity>
+              <Text style={styles.navTitle}>{texto.title}</Text>
             </Animatable.View>
           )}
           renderForeground={() => (
             <View style={styles.titleContainer}>
               <Text style={styles.imageTitle}></Text>
             </View>
-          )}>
+          )}
+        >
           <TriggeringView
             style={styles.section}
             onHide={() => this.navTitleView.fadeInUp(0)}
-            onDisplay={() => this.navTitleView.fadeOut(0)}>
-            <TouchableOpacity  onPress={() =>this.props.navigation.navigate('Diurno')}> 
-              <Image source={require('../assets/back.png')} style={styles.imageButtonTitle}/> 
+            onDisplay={() => this.navTitleView.fadeOut(0)}
+          >
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('Diurno')}
+            >
+              <Image
+                source={require('../assets/back.png')}
+                style={styles.imageButtonTitle}
+              />
             </TouchableOpacity>
             <Text style={styles.title}>
               <Text style={styles.name}>{texto.title}</Text>
@@ -191,12 +204,13 @@ handleEmail = () => {
           <View style={[styles.section, styles.section]}>
             <Text style={styles.sectionTitle}>Dúvidas ou Sugestões</Text>
             <View style={styles.keywords}>
-              {texto.keywords.map(keyword => (
+              {texto.keywords.map((keyword) => (
                 <View style={styles.keywordContainer} key={keyword}>
-               
-                  <TouchableOpacity  onPress={() => this.refs.modalContato.open()}>
-                      <Text style={styles.keyword} >{keyword}</Text>
-                   </TouchableOpacity>
+                  <TouchableOpacity
+                    onPress={() => this.refs.modalContato.open()}
+                  >
+                    <Text style={styles.keyword}>{keyword}</Text>
+                  </TouchableOpacity>
                 </View>
               ))}
             </View>
@@ -204,38 +218,40 @@ handleEmail = () => {
           <View style={[styles.section, styles.sectionLarge]}>
             <Text style={styles.sectionTitle}>Contato Desenvolvedor</Text>
             <View style={styles.keywords}>
-              {texto.keywords1.map(keywords1 => (
+              {texto.keywords1.map((keywords1) => (
                 <View style={styles.keywordContainer} key={keywords1}>
-               
-                  <TouchableOpacity  onPress={() => this.refs.modalContato.open()}>
-                      <Text style={styles.keyword} >{keywords1}</Text>
-                   </TouchableOpacity>
+                  <TouchableOpacity
+                    onPress={() => this.refs.modalContato.open()}
+                  >
+                    <Text style={styles.keyword}>{keywords1}</Text>
+                  </TouchableOpacity>
                 </View>
               ))}
             </View>
           </View>
         </HeaderImageScrollView>
 
-        
-
-       {/*Bottom Modal*/}
+        {/*Bottom Modal*/}
         <Modal
           style={{
-            height: 150, 
+            height: 150,
             padding: 10,
-            backgroundColor: '#e5e5e5',    
+            backgroundColor: '#e5e5e5',
             borderBottomLeftRadius: 0,
             borderBottomRightRadius: 0,
             borderTopLeftRadius: 15,
-            borderTopRightRadius: 15
-            }}
+            borderTopRightRadius: 15,
+          }}
           position={'bottom'}
-          ref={'modalContato'}>
+          ref={'modalContato'}
+        >
           <Text style={styles.title}>Entre em contato: </Text>
-            <TouchableOpacity onPress={this.handleEmail} style={styles.keywordContainer}>
-              <Text style={styles.keyword} >Enviar um E-mail</Text>
-            </TouchableOpacity>
-            
+          <TouchableOpacity
+            onPress={this.handleEmail}
+            style={styles.keywordContainer}
+          >
+            <Text style={styles.keyword}>Enviar um E-mail</Text>
+          </TouchableOpacity>
         </Modal>
       </View>
     );
