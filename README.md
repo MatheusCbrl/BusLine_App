@@ -25,11 +25,7 @@ var sharedBlacklist = [
   /.*\/__tests__\/.*/
 ];
 **********************************************************************
-In app.json add
-"sourceExts": [ "js", "json", "ts", "tsx", "jsx", "vue"]
-Inside
-"packagerOpts"
-***********************************************************************
+
 Do this on AppEntry.js
 import { registerRootComponent } from 'expo';
 import { activateKeepAwake } from 'expo-keep-awake';
@@ -52,7 +48,8 @@ License
 
 This project is licensed under the MIT License
 
-
+************************************************************************
+For Mia IA add:
 
         <TouchableOpacity style={styles.chatBot} activeOpacity={0.5}  onPress={() => this.props.navigation.navigate('ChatBot')}>
           <Image
