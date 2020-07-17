@@ -4,7 +4,7 @@
     "description": "@MatheusCabral",
     "slug": "BusLine-App",
     "privacy": "unlisted",
-    "sdkVersion": "35.0.0",
+    "sdkVersion": "38.0.0",
     "version": "1.0.0",
     "orientation": "portrait",
     "primaryColor": "#e06400",
@@ -22,12 +22,6 @@
         "tsx",
         "jsx",
         "vue"
-      ],
-      "assetExts": [
-        "ttf",
-        "mp4",
-        "otf",
-        "xml"
       ]
     },
     "ios": {
