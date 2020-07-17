@@ -307,9 +307,9 @@ export default class screens extends Component {
     return (
       <View style={styles.container}>
         <StatusBar
-          barStyle="dark-content"
+          barStyle="light-content"
           // dark-content, light-content and default
-          hidden={Platform.OS === 'ios' ? false : true}
+          //hidden={Platform.OS === 'ios' ? false : true}
           //To hide statusBar
           backgroundColor="transparent"
           //Background color of statusBar
@@ -376,7 +376,7 @@ export default class screens extends Component {
               source={require('../../assets/back.png')}
               style={{
                 marginLeft: 10,
-                marginTop: 15,
+                marginTop: 30,
                 width: 25,
                 height: 25,
                 tintColor: '#FF3D00',
