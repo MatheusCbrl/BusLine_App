@@ -163,7 +163,7 @@ const customStyle = [
     stylers: [
       {
         color: '#17263c',
-      }, 
+      },
     ],
   },
   {
@@ -205,7 +205,7 @@ export default class screens extends Component {
     this.id = 0;
     this.animation = new Animated.Value(0);
   }
-   componentDidMount() {
+  componentDidMount() {
     // We should detect when scrolling has stopped then animate
     // We should just debounce the event listener here
     this.animation.addListener(({ value }) => {
@@ -307,9 +307,9 @@ export default class screens extends Component {
     return (
       <View style={styles.container}>
         <StatusBar
-          barStyle="dark-content"
+          barStyle="light-content"
           // dark-content, light-content and default
-          hidden={Platform.OS === 'ios' ? false : true}
+          //hidden={Platform.OS === 'ios' ? false : true}
           //To hide statusBar
           backgroundColor="transparent"
           //Background color of statusBar
@@ -373,10 +373,10 @@ export default class screens extends Component {
             onPress={() => this.props.navigation.navigate('Linhas')}>
             {/*Donute Button Image */}
             <Image
-             source={require('../../../assets/back.png')}
+              source={require('../../../assets/back.png')}
               style={{
                 marginLeft: 10,
-                marginTop: 15,
+                marginTop: 30,
                 width: 25,
                 height: 25,
                 tintColor: '#FF3D00',
@@ -414,12 +414,12 @@ export default class screens extends Component {
                     A partir de: {markers.hora}
                   </Text>
                   <Text numberOfLines={1} style={styles.text1}>
-                    
+
                   </Text>
                   <Image
                     source={require('../../../assets/drag.png')}
                     style={{
-                      marginLeft: Dimensions.get('window').width / 1.5, 
+                      marginLeft: Dimensions.get('window').width / 1.5,
                       width: 65,
                       height: 65,
                       tintColor: '#FF3D00',
