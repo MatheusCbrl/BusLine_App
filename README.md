@@ -38,11 +38,6 @@ if (__DEV__) {
 
 registerRootComponent(App);
 ************************************************************************
-Authors
-
-Matheus Cabral - Initial work - matheus.cabral@marcopolo.com.br
-
-RH Team - Initial work - rh@marcopolo.com.br
 
 License
 
